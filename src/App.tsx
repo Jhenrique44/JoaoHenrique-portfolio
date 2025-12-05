@@ -6,6 +6,7 @@ import Index from "./pages";
 import { TooltipProvider } from "./components/utils/tooltip";
 import { Toaster } from "./components/utils/toaster";
 import { Toaster as Sonner } from "./components/utils/sonner";
+import { NotFound } from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />}></Route>
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

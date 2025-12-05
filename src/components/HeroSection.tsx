@@ -79,7 +79,7 @@ export const HeroSection = () => {
           <div className="">
             <div className="">
               <h1>Hi! I'm João Henrique!</h1>
-              <p>Computere Engineer, Developer and Software Architect</p>
+              <p>Computer Engineer, Developer and Software Architect</p>
             </div>
 
             <div className="">

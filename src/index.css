@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -68,4 +68,223 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+@layer base {
+  :root {
+    --background: 30 25% 95%;
+    --foreground: 20 14% 15%;
+
+    --card: 30 25% 97%;
+    --card-foreground: 20 14% 15%;
+
+    --popover: 30 25% 97%;
+    --popover-foreground: 20 14% 15%;
+
+    --primary: 25 45% 40%;
+    --primary-foreground: 30 25% 95%;
+
+    --secondary: 25 20% 85%;
+    --secondary-foreground: 20 14% 15%;
+
+    --muted: 25 15% 88%;
+    --muted-foreground: 20 8% 45%;
+
+    --accent: 30 30% 80%;
+    --accent-foreground: 20 14% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 25 15% 85%;
+    --input: 25 15% 85%;
+    --ring: 25 45% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 30 25% 95%;
+    --sidebar-foreground: 20 14% 15%;
+    --sidebar-primary: 25 45% 40%;
+    --sidebar-primary-foreground: 30 25% 95%;
+    --sidebar-accent: 25 20% 85%;
+    --sidebar-accent-foreground: 20 14% 15%;
+    --sidebar-border: 25 15% 85%;
+    --sidebar-ring: 25 45% 40%;
+  }
+
+  .dark {
+    --background: 20 14% 4%;
+    --foreground: 30 25% 95%;
+
+    --card: 20 14% 4%;
+    --card-foreground: 30 25% 95%;
+
+    --popover: 20 14% 4%;
+    --popover-foreground: 30 25% 95%;
+
+    --primary: 30 40% 70%;
+    --primary-foreground: 20 14% 4%;
+
+    --secondary: 20 10% 15%;
+    --secondary-foreground: 30 25% 95%;
+
+    --muted: 20 8% 12%;
+    --muted-foreground: 25 15% 65%;
+
+    --accent: 20 10% 15%;
+    --accent-foreground: 30 25% 95%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 30 25% 95%;
+
+    --border: 20 8% 20%;
+    --input: 20 8% 20%;
+    --ring: 30 40% 70%;
+
+    --sidebar-background: 20 14% 4%;
+    --sidebar-foreground: 30 25% 95%;
+    --sidebar-primary: 30 40% 70%;
+    --sidebar-primary-foreground: 20 14% 4%;
+    --sidebar-accent: 20 10% 15%;
+    --sidebar-accent-foreground: 30 25% 95%;
+    --sidebar-border: 20 8% 20%;
+    --sidebar-ring: 30 40% 70%;
+  }
+}
+/* 
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+} */
+
+
+.gradient-earth {
+  background: linear-gradient(-45deg, #5B2C06, #B55338, #F5B700, #D9BBA0, #4F6D4F, #A76726);
+  background-size: 400% 400%;
+  animation: gradient-earth 15s ease-in-out infinite;
+}
+
+.gradient-earth-contact {
+  background: linear-gradient(-45deg, #6b4423, #7a9248, #d97706, #a6634a, #6b8e6b, #9a6d3a);
+  background-size: 400% 400%;
+  animation: gradient-earth 12s ease-in-out infinite;
+}
+
+.gradient-earth-light {
+  background: linear-gradient(135deg, #f4f0e8 0%, #e8ddd0 50%, #d9c4ad 100%);
+}
+
+/* Terminal styling */
+.terminal {
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-header {
+  background: #2d2d2d;
+  padding: 12px 16px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-content {
+  padding: 20px;
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Thank you animation */
+@keyframes thank-you-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  40% {
+    transform: translateY(-10px) rotate(-6deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(-6deg);
+  }
+}
+
+@keyframes thank-you-bounce-2 {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(6deg);
+  }
+  40% {
+    transform: translateY(-8px) rotate(6deg);
+  }
+  60% {
+    transform: translateY(-4px) rotate(6deg);
+  }
+}
+
+.thank-you-1 {
+  animation: thank-you-bounce 3s ease-in-out infinite;
+}
+
+.thank-you-2 {
+  animation: thank-you-bounce-2 3s ease-in-out infinite 0.5s;
+}
+
+/* Cursor piscando no terminal */
+.blinking-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background-color: white;
+  margin-left: 2px;
+  animation: blink 1s steps(2, start) infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+@keyframes gradient-earth {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-bege {
+  background-color: #eee2d3; 
 }
