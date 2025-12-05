@@ -2,9 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./App.css";
 import Index from "./pages";
-import { TooltipProvider } from "./components/utils/tooltip";
-import { Toaster as Sonner } from "./components/utils/sonner";
 
+import { TooltipProvider } from "./components/utils/tooltip";
+import { Toaster } from "./components/utils/toaster";
+import { Toaster as Sonner } from "./components/utils/sonner";
 const queryClient = new QueryClient();
 
 function App() {
