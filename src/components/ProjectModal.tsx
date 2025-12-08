@@ -30,17 +30,19 @@ export const ProjectModal = ({
 }: ProjectModalProps) => {
   if (!project) return null;
 
-  const handleLinkClick = (url?: string) => { 
+  const handleLinkClick = (url?: string) => {
     window.open(url, "_blank");
-  }
+  };
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="">
+      <DialogContent className="max-w-3x1 max-h-[80vh] overflow-y-auto p-6">
         <DialogHeader>
-          <DialogTitle>{project.title}</DialogTitle>
+          <DialogTitle className="text-2x1 font-bold text-earth-800 mb-4">
+            {project.title}
+          </DialogTitle>
         </DialogHeader>
-        <div className="">
-          <div className="">
+        <div className="space-y-6">
+          <div className="flex jusitfy-center items-center">
             {project.video ? (
               <video
                 src={project.video}
@@ -49,44 +51,62 @@ export const ProjectModal = ({
                 muted
                 controls={false}
                 poster={project.modalImage || project.image}
-                className=""
+                className="w-full max-h-[300px] object-contain rounded-lg"
               />
             ) : (
               <img
                 src={project.modalImage || project.image}
                 alt={project.title}
+                className="w-full max-h-[300px] object-contain rounded-lg"
               />
             )}
           </div>
 
           {/* {Description} */}
-          <div className="">
-            <h3>About this project</h3>
-            <p>{project.fullDescription}</p>
+          <div className="space-y-4">
+            <h3 className="text-base font-semibold text-earth-800">
+              About this project
+            </h3>
+            <p className="text-sm text-earth-700">{project.fullDescription}</p>
           </div>
-          <div className="">
+          <div className="flex flex-wrap gap-2">
             {project.tags.map((tag, index) => (
-              <Badge key={index} variant="secondary" className="">
+              <Badge
+                key={index}
+                variant="secondary"
+                className="bg-earth-200 text-earth-800 hover:bg-earth-300"
+              >
                 {tag}
               </Badge>
             ))}
           </div>
 
-          <div className="">
+          <div className="flex gap-3 pt-4">
             {project.liveUrl && (
-                <Button onClick={() => handleLinkClick(project.liveUrl)} className="">
+              <Button
+                onClick={() => handleLinkClick(project.liveUrl)}
+                className="bg-earth-600 hoveR:bg-earth-700 text-white"
+              >
                 View Website
-                </Button>
+              </Button>
             )}
             {project.githubUrl && (
-                <Button variant="outline" onClick={()=> handleLinkClick(project.githubUrl)}>
-                    View on GitHub
-                </Button>
+              <Button
+                variant="outline"
+                onClick={() => handleLinkClick(project.githubUrl)}
+                className="border-earth-600 text-earth-600 hover:bg-earth-50"
+              >
+                View on GitHub
+              </Button>
             )}
-            { project.youtubeUrl && (
-                <Button variant="outline" onClick={()=> handleLinkClick(project.youtubeUrl)}>
-                    Watch on YouTube
-                </Button>
+            {project.youtubeUrl && (
+              <Button
+                variant="outline"
+                onClick={() => handleLinkClick(project.youtubeUrl)}
+                className="border-red-600 text-red-600 hover:bg-red-50"
+              >
+                Watch on YouTube
+              </Button>
             )}
           </div>
         </div>
