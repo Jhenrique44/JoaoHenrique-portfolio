@@ -1,10 +1,10 @@
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./utils/button";
 export const ContactSection = () => {
   const handleSocialClick = (social: string) => () => {
     const urls = {
       instagram: "https://www.instagram.com/joaoqueiroz/",
-      linkedin: "https://www.linkedin.com/in/joaoqueiroz/",
+      linkedin: "https://www.linkedin.com/in/jhenriquefq/",
       github: "https://github.com/jhenrique44",
     };
     window.open(urls[social as keyof typeof urls], "_blank");
@@ -17,12 +17,12 @@ export const ContactSection = () => {
     <section id="contact" className="py-20 px-6 gradient-earth-contact">
       <div className="container mx-auto max-w-6x1">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white- space-y-8 animate-slide-up">
+          <div className="text-white space-y-8 animate-slide-up">
             <div>
               <h2 className="text-3x1 font-bold mb-4">
                 Get in touch!
                 <span
-                  className="cursor-pointer hover:text-mustard-300 transition-colors decoration-2 underline-offset-8 ml-2"
+                  className="cursor-pointer hover:text-mustard-300 transition-colors underline decoration-2 underline-offset-8 ml-2"
                   onClick={handleCalendlyClick}
                 >
                   {" "}
@@ -44,14 +44,6 @@ export const ContactSection = () => {
               className="flex gap-6 animate-fade-in"
               style={{ animationDelay: "0.4s" }}
             >
-              <Button
-                size="icon"
-                variant="outline"
-                onClick={handleSocialClick("instagram")}
-                className="border-2 border-mustard-400 text-brown-900 hover:bg-mustard-400 hover:text-brown-900 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
-              >
-                <Instagram className="w-6 h-6" />
-              </Button>
 
               <Button
                 size="icon"

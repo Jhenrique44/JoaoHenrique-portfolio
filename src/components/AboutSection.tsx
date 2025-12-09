@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 px-6 bg-sand-200 mt-16">
-      <div className="container mx-auto max-w-10x1">
+      <div className="container mx-auto max-w-10xl">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 animate-slide-up">
             <h2 className="text-4x1 lg:text-5x1 font-luckiest text-brown-800 mb-8">
