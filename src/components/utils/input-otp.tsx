@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "../../lib/utils";
 import { Dot } from "lucide-react";
-import { OTPInput, OTPInputContext } from "react-otp-input";
+import { OTPInput, OTPInputContext } from "input-otp";
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
@@ -39,6 +39,7 @@ const InputOTPSlot = React.forwardRef<
         isActive && "z-10 ring-2 ring-ring ring-offset-background",
         className
       )}
+      {...props}
     >
       {char}
       {hasFakeCaret && (
@@ -56,7 +57,7 @@ React.ElementRef<"div">,
 React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => {
     <div ref={ref} role="separator" {...props}>
-        <Dot></Dot>
+        <Dot/>
     </div>
 })
 
