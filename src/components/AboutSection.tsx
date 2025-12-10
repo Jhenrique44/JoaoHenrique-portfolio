@@ -4,15 +4,14 @@ const AboutSection = () => {
       <div className="container mx-auto max-w-10xl">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6 animate-slide-up">
-            <h2 className="text-4xl lg:text-5xl font-luckiest text-brown-800 mb-8">
+            <h2 className="text-4xl lg:text-5xl font-luckiest text-crimson-800 mb-8">
               About Me
             </h2>
             <div className="prose prose-lg text-brown-700 space-y-4">
               <p className="animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-                veniam neque. Neque quisquam aperiam quam sunt natus. Nihil
-                provident magnam quidem pariatur quasi, itaque, amet fugiat
-                distinctio iste rerum culpa.
+                My name is João Henrique and I believe that we can achieve innovation  
+                with tecnology to improve our lives. I want to be a part of a team where I can
+                learn, grow and share knowledge. I believe 
               </p>
 
               <p className="animate-fade-in" style={{ animationDelay: "0.2s" }}>

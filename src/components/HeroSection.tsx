@@ -111,7 +111,7 @@ export const HeroSection = () => {
                     <div key={index}>
                       {formatTerminalLine(line)}
                       {index === displayedLines.length - 2 && (
-                        <span className="blinking-cursor mb-4"></span>
+                        <span className="blinking-cursor mb-1"></span>
                       )}
                     </div>
                   ))}
@@ -125,14 +125,14 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("contact")}
-                className="bg-[#5B2C06] text-white hover:bg-[#B55338] border-2 border-[#5B2C06] font-medium"
+                className="bg-[#551b1b] text-white hover:bg-[#B55338] border-2 border-[#5B2C06] font-medium"
               >
                 Contact
               </Button>
               <Button
                 size="lg"
                 onClick={() => scrollToSection("projects")}
-                className="bg-[#5B2C06] text-white hover:bg-[#8BA98E] border-2 border-[#5B2C06] font-medium"
+                className="bg-[#551b1b] text-white hover:bg-[#B55338] border-2 border-[#5B2C06] font-medium"
               >
                 View Projects
               </Button>
@@ -146,11 +146,11 @@ export const HeroSection = () => {
               className="flex justify-center lg:justify-end items-end animte-fade-in"
               style={{ animationDelay: "0.8s" }}
             >
-              <div className="w-[300px] sm:w-[360px] md:w-[420px] lg:w-[500px] xl:w-[580px]">
+              <div className="w-[300px] sm:w-[360px] md:w-[420px] lg:w-[500px] xl:w-[580px] ">
                 <img
-                  src=""
+                  src="../../public/images/jh-backgorund-red.png"
                   alt="João Henrique"
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-contain rounded-full"
                 />
               </div>
             </div>

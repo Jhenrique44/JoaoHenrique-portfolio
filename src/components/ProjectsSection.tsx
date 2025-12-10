@@ -42,12 +42,12 @@ export const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="bg-[#5b2c06] backdrop-blur-sm  border-white/20 hover:bg-[#a1765b] cursor-pointer"
+              className="bg-[#3b1414] backdrop-blur-sm  border-white/20 hover:bg-[#813b28] cursor-pointer"
               style={{ animationDelay: `${index * 0.2}s` }}
               onClick={() => handleProjectClick(project)}
             >
               <div className="p-6">
-                <div className="aspect-video mb-6 rounded-lg overflow-hidden bg-moss-800">
+                <div className="aspect-video mb-6 rounded-lg overflow-hidden bg-crimson-700">
                   <img
                     src=""
                     alt=""
