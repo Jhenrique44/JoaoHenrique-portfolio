@@ -117,6 +117,22 @@
 .gradient-earth-light {
   background: linear-gradient(135deg, #f4f0e8 0%, #e8ddd0 50%, #d9c4ad 100%);
 }
+.gradient-crimson {
+  background: linear-gradient(-45deg, #2d2d2d, #6f2222, #a63c3c, #3f3f3f);
+  background-size: 400% 400%;
+  animation: gradient-crimson 15s ease-in-out infinite;
+}
+
+.gradient-crimson-soft {
+  background: linear-gradient(135deg, #f2e8e8, #d59f9f, #a63c3c);
+}
+
+.gradient-crimson-dark {
+  background: linear-gradient(-45deg, #1d1d1d, #551b1b, #8b2e2e, #2d2d2d);
+  background-size: 400% 400%;
+  animation: gradient-steel 15s ease-in-out infinite;
+}
+
 
 /* Terminal styling */
 .terminal {

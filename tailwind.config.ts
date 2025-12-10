@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -135,6 +134,31 @@ export default {
           800: "#556b55",
           900: "#3e4f3e",
         },
+        crimson: {
+          50: "#f9f5f5",
+          100: "#f2e8e8",
+          200: "#e4c7c7",
+          300: "#d59f9f",
+          400: "#bf5f5f",
+          500: "#a63c3c",
+          600: "#8b2e2e",
+          700: "#6f2222",
+          800: "#551b1b",
+          900: "#3b1414",
+          1000: "#550011"
+        },
+        steel: {
+          50: "#f7f7f7",
+          100: "#e3e3e3",
+          200: "#c8c8c8",
+          300: "#adadad",
+          400: "#7b7b7b",
+          500: "#5a5a5a",
+          600: "#3f3f3f",
+          700: "#2d2d2d",
+          800: "#1d1d1d",
+          900: "#111111",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -206,6 +230,41 @@ export default {
             backgroundPosition: "0% 50%",
           },
         },
+        "gradient-crimson": {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "25%": {
+            backgroundPosition: "100% 0%",
+          },
+          "50%": {
+            backgroundPosition: "100% 100%",
+          },
+          "75%": {
+            backgroundPosition: "0% 100%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
+        },
+        "gradient-steel": {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "25%": {
+            backgroundPosition: "100% 0%",
+          },
+          "50%": {
+            backgroundPosition: "100% 100%",
+          },
+          "75%": {
+            backgroundPosition: "0% 100%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
+        },
+
         "terminal-blink": {
           "0%, 50%": { opacity: "1" },
           "51%, 100%": { opacity: "0" },
@@ -229,6 +288,8 @@ export default {
         "gradient-earth": "gradient-earth 15s ease-in-out infinite",
         "terminal-blink": "terminal-blink 1s infinite",
         "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
+        "gradient-crimson": "gradient-crimson 12s ease-in-out infinite",
+        "gradient-steel": "gradient-steel 15s ease-in-out infinite",
       },
     },
   },

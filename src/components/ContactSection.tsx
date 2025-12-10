@@ -14,7 +14,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 gradient-earth-contact">
+    <section id="contact" className="py-20 px-6 gradient-crimson-dark ">
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-8 animate-slide-up">

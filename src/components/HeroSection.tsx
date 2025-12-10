@@ -75,7 +75,7 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 gradient-earth overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 gradient-crimson overflow-hidden"
     >
       <div className="container mx-auto max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -100,18 +100,18 @@ export const HeroSection = () => {
               style={{ animationDelay: "0.4s" }}
             >
               <div className="terminal-header">
-                <div className="temrina-dot bg-red-500"></div>
+                <div className="terminal-dot bg-red-500"></div>
                 <div className="terminal-dot bg-yellow-500"></div>
                 <div className="terminal-dot bg-green-500"></div>
                 <span className="text-gray-300 text-sm ml-2">Bash</span>
               </div>
               <div className="terminal-content">
-                <pre className="whitespace-pre-wrap text-white">
+                <pre className="whitespace-pre-wrap text-white text-left">
                   {displayedLines.map((line, index) => (
                     <div key={index}>
                       {formatTerminalLine(line)}
-                      {index === displayedLines.length - 1 && (
-                        <span className="blinking-cursor"></span>
+                      {index === displayedLines.length - 2 && (
+                        <span className="blinking-cursor mb-4"></span>
                       )}
                     </div>
                   ))}

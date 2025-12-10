@@ -27,7 +27,7 @@ export const ExperienceSection = () => {
     window.open("");
   };
   return (
-    <section id="experience" className="py-20 px-6 bg-[#4f6d4f]">
+    <section id="experience" className="py-20 px-6 bg-crimson-900">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl lg:text-5xl font-luckiest text-white text-center mb-15 animate-slide-up">
           Some of my experiences

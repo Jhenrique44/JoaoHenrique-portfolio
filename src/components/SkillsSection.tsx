@@ -38,9 +38,9 @@ export const SkillsSection = () => {
     },
   ];
   return (
-    <section id="skills" className="py-20 bg-moss-800">
+    <section id="skills" className="py-20 bg-crimson-900">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl lg:text-5xl font-luckiest text-while text-center mb-16 animate-slide-up">
+        <h2 className="text-4xl lg:text-5xl font-luckiest text-white text-center mb-16 animate-slide-up">
           Featured Skills
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
