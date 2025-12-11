@@ -20,11 +20,22 @@ export const ProjectsSection = () => {
     {
       title: "Portfolio Angular",
       description: "This is a portfolio made with Angular.",
-      fullDescription: "This project is a portfolio made with Angular to showcase my skills and learning progress in this framework.",
+      fullDescription:
+        "This project is a portfolio made with Angular to showcase my skills and learning progress in this framework.",
       image: "/images/portfolio-angular.png",
       video: "",
       tags: ["Angular", "HTML", "Typescript", "CSS"],
       liveUrl: "https://github.com/Jhenrique44/portfolio-angular",
+    },
+    {
+      title: "Smart Fleet",
+      description: "Fullstack project with Spring Boot and Angular.",
+      fullDescription:
+        "Smart Fleet is a modern fleet-tracking application designed to monitor vehicles in real time and streamline fleet operations. It provides a secure login experience, a clean user interface, and a reliable API for managing and accessing tracking data. Built with Angular on the frontend and Spring Boot on the backend, Smart Fleet delivers a scalable foundation for location tracking, vehicle status monitoring, and future fleet-management features.",
+      image: "/images/smart-fleet-front.png",
+      video: "",
+      tags: ["Angular", "Typescript", "Java", "Spring Boot", "Sass"],
+      liveUrl: "https://github.com/Jhenrique44/login-page-ng",
     },
   ];
   const handleProjectClick = (project: Project) => {
