@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { cn } from "../../lib/utils";
 import { Dot } from "lucide-react";
 import { OTPInput, OTPInputContext } from "input-otp";
@@ -6,23 +6,26 @@ import { OTPInput, OTPInputContext } from "input-otp";
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
   React.ComponentPropsWithoutRef<typeof OTPInput>
->(({ className, containerClassName, ...props }, ref) => {
+>(({ className, containerClassName, ...props }, ref) => (
   <OTPInput
     ref={ref}
-    containerClassName={cn("flex gap-2", containerClassName)}
-    className={cn("disable:cursor-not-allowed", className)}
+    containerClassName={cn(
+      "flex items-center gap-2 has-[:disabled]:opacity-50",
+      containerClassName
+    )}
+    className={cn("disabled:cursor-not-allowed", className)}
     {...props}
-  />;
-});
-InputOTP.displayName = "InputOTP";
+  />
+))
+InputOTP.displayName = "InputOTP"
 
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
->(({ className, ...props }, ref) => {
-  <div ref={ref} className={cn("flex items-center", className)} {...props} />;
-});
-InputOTPGroup.displayName = "InputOTPGroup";
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("flex items-center", className)} {...props} />
+))
+InputOTPGroup.displayName = "InputOTPGroup"
 
 const InputOTPSlot = React.forwardRef<
   React.ElementRef<"div">,
@@ -53,14 +56,13 @@ const InputOTPSlot = React.forwardRef<
 InputOTPSlot.displayName = "InputOTPSlot";
 
 const InputOTPSeparator = React.forwardRef<
-React.ElementRef<"div">,
-React.ComponentPropsWithoutRef<"div">
->(({ className, ...props }, ref) => {
-    <div ref={ref} role="separator" {...props}>
-        <Dot/>
-    </div>
-})
-
+  React.ElementRef<"div">,
+  React.ComponentPropsWithoutRef<"div">
+>(({ ...props }, ref) => (
+  <div ref={ref} role="separator" {...props}>
+    <Dot />
+  </div>
+))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
