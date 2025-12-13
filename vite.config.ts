@@ -11,7 +11,7 @@ export default defineConfig(() => ({
   plugins: [
     react(),
   ],
-  base: "/portfolio-react/",
+  base: "/Joaohenirque-portfolio/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
