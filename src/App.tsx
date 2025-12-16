@@ -15,7 +15,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename="/JoaoHenrique-portfolio">
           <Routes>
             <Route path="/" element={<Index />}></Route>
             <Route path="*" element={<NotFound />} />
