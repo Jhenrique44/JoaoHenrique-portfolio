@@ -1,28 +1,48 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "./utils/button";
-
-const terminalLines = [
-  "user@joaohenrique:~$ Hi!",
-  "Software Engineer ",
-  "",
-  "user@joaohenrique:~$ ls skills",
-  "Fullstack-Developer VueJs Javascript Java Springboot SQL",
-  "",
-  "user@joaohenrique:~$ ls learning",
-  "Angular Typescript AWS",
-  "user@joaohenrique:~$ ",
-];
+import { useLanguage } from "../translator/LanguageTranslator";
 
 export const HeroSection = () => {
+  const { t, language } = useLanguage();
   const [displayedLines, setDisplayedLines] = useState<string[]>([]);
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+
+  const terminalLines = useMemo(
+    () => [
+      "user@joaohenrique:~$ Hi!",
+      t("term_line1"),
+      "",
+      "user@joaohenrique:~$ ls skills",
+      t("term_line2"),
+      "",
+      "user@joaohenrique:~$ ls learning",
+      t("term_line3"),
+      "user@joaohenrique:~$ ",
+    ],
+    [t]
+  );
+  useEffect(() => {
+    setDisplayedLines([]);
+    setCurrentLineIndex(0);
+    setCharIndex(0);
+  }, [language]);
 
   useEffect(() => {
     if (currentLineIndex >= terminalLines.length) return;
 
     const currentLine = terminalLines[currentLineIndex];
     const typingTimeout = setTimeout(() => {
+      if (currentLine === "") {
+        setDisplayedLines((prev) => {
+          const updated = [...prev];
+          updated[currentLineIndex] = "";
+          return updated;
+        });
+        setCurrentLineIndex(currentLineIndex + 1);
+        setCharIndex(0);
+        return;
+      }
       const updatedLine = currentLine.slice(0, charIndex + 1);
 
       //   const updatedLines = [...displayedLines];
@@ -51,8 +71,13 @@ export const HeroSection = () => {
     }, 25);
 
     return () => clearTimeout(typingTimeout);
-  }, [charIndex, currentLineIndex]);
+  }, [charIndex, currentLineIndex, terminalLines]);
 
+  useEffect(() => {
+    if (displayedLines.length < terminalLines.length) {
+      setDisplayedLines((prev) => [...prev, ""]);
+    }
+  }, [currentLineIndex, terminalLines]);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -60,7 +85,7 @@ export const HeroSection = () => {
     }
   };
   const formatTerminalLine = (line: string) => {
-    if (line.startsWith("user@joaohenrique")) {
+    if ( line &&line.startsWith("user@joaohenrique")) {
       const parts = line.split("~");
       return (
         <>
@@ -85,13 +110,13 @@ export const HeroSection = () => {
                 className="text-4xl lg:text-5xl font-bold mb-4 animate-slide-up whitespace-nowrap"
                 style={{ animationDelay: "0.2s" }}
               >
-                Hi! I'm João Henrique!
+                {t("hero_greeting")}
               </h1>
               <p
                 className="textxl lg:text-2xl text-white/90 mb-8 animate-slide-up"
                 style={{ animationDelay: "0.2s" }}
               >
-                Computer Engineer, Developer and Software Architect
+                {t("hero_role")}
               </p>
             </div>
 
@@ -127,14 +152,14 @@ export const HeroSection = () => {
                 onClick={() => scrollToSection("contact")}
                 className="bg-[#551b1b] text-white hover:bg-[#B55338] border-2 border-[#5B2C06] font-medium"
               >
-                Contact
+                {t('hero_btn_contact')}
               </Button>
               <Button
                 size="lg"
                 onClick={() => scrollToSection("projects")}
                 className="bg-[#551b1b] text-white hover:bg-[#B55338] border-2 border-[#5B2C06] font-medium"
               >
-                View Projects
+                {t('hero_btn_projects')}
               </Button>
             </div>
           </div>
