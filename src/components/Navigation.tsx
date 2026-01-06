@@ -42,9 +42,8 @@ export const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <div className="h-6 w-px bg-gray-300 mx-2">
+            <div className="h-6 w-px bg-gray-300 mx-2"></div>
               <LanguageSelection />
-            </div>
           </div>
           {/* {Mobile Menu} */}
           <div className="flex items-center gap-4 md:hidden">
