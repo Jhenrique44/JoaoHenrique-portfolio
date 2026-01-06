@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "./utils/card";
 import { ProjectModal } from "./ProjectModal";
 import { Badge } from "./utils/badge";
+import { useLanguage } from "../translator/LanguageTranslator";
 
 type Project = {
   title: string;
@@ -14,14 +15,14 @@ type Project = {
 };
 
 export const ProjectsSection = () => {
+  const { t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const projects: Project[] = [
     {
       title: "Portfolio Angular",
-      description: "This is a portfolio made with Angular.",
-      fullDescription:
-        "This project is a portfolio made with Angular to showcase my skills and learning progress in this framework.",
+      description: t("proj_angular_desc"),
+      fullDescription: t("proj_angular_full"),
       image: "/images/portfolio-angular.png",
       video: "",
       tags: ["Angular", "HTML", "Typescript", "CSS"],
@@ -29,23 +30,39 @@ export const ProjectsSection = () => {
     },
     {
       title: "Smart Fleet",
-      description: "Fullstack project with Spring Boot and Angular.",
-      fullDescription:
-        "Smart Fleet is a modern fleet-tracking application designed to monitor vehicles in real time and streamline fleet operations. It provides a secure login experience, a clean user interface, and a reliable API for managing and accessing tracking data. Built with Angular on the frontend and Spring Boot on the backend, Smart Fleet delivers a scalable foundation for location tracking, vehicle status monitoring, and future fleet-management features.",
+      description: t("proj_smart_desc"),
+      fullDescription: t("proj_smart_full"),
       image: "/images/smart-fleet-front.png",
       video: "",
       tags: ["Angular", "Typescript", "Java", "Spring Boot", "Sass"],
       liveUrl: "https://github.com/Jhenrique44/login-page-ng",
     },
-    { 
+    {
+      title: "Resort Website React",
+      description: t("proj_resort_desc"),
+      fullDescription: t("proj_resort_full"),
+      image: "/images/resort.png",
+      video: "",
+      tags: ["React", "JavaScript", "HTML", "CSS"],
+      liveUrl: "https://github.com/Jhenrique44/Resort-yt",
+    },
+    {
       title: "Picpay-backend-challenge",
-      description: "Backend project build in Java and Spring Boot.",
-      fullDescription:
-        "Project build for Picpay's backend-challenge, using Spring Boot. A simple API to simulate a payment system.",
+      description: t("proj_picpay_desc"),
+      fullDescription: t("proj_picpay_full"),  
       image: "/images/Picpay-project.png",
       video: "",
       tags: ["Java", "Spring Boot", "PostgreSQL", "Hibernate", "Docker"],
       liveUrl: "https://github.com/Jhenrique44/PicPay-backend-j",
+    },
+    {
+      title: "QrCode Generator",
+      description: t("proj_qrcode_desc"),
+      fullDescription: t("proj_qrcode_full"),
+      image: "/images/qr-code-project.png",
+      video: "",
+      tags: ["Java", "Spring Boot", "AWS", "Docker"],
+      liveUrl: "https://github.com/Jhenrique44/qrcode-generator",
     }
   ];
   const handleProjectClick = (project: Project) => {

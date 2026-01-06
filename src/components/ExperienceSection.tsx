@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CvModal } from "./CvModal";
 import { Button } from "./utils/button";
 import { Card } from "./utils/card";
+import { useLanguage } from "../translator/LanguageTranslator";
 
 type Experience = {
   title: string;
@@ -12,6 +13,7 @@ type Experience = {
 };
 
 export const ExperienceSection = () => {
+  const { t } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const experiences: Experience[] = [
     {
@@ -40,9 +42,9 @@ export const ExperienceSection = () => {
     <section id="experience" className="py-20 px-6 bg-crimson-800">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl lg:text-5xl font-luckiest text-white text-center mb-15 animate-slide-up mb-16">
-          Some of my experiences
+          {t('exp_title')}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {experiences.map((experience, index) => (
             <Card
               key={index}
@@ -80,7 +82,7 @@ export const ExperienceSection = () => {
               className="bg-white text-brown-800 hover:bg-brown-300 border-2 border-white font-semibold text-base md:text-lg px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all"
               onClick={handleCVClick}
             >
-              Here! Download my CV
+              {t('exp_cv_button')}
             </Button>
           </div>
         </div>

@@ -1,6 +1,9 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "./utils/button";
+import { useLanguage } from "../translator/LanguageTranslator";
 export const ContactSection = () => {
+
+  const { t } = useLanguage(); 
   const handleSocialClick = (social: string) => () => {
     const urls = {
       instagram: "https://www.instagram.com/joaoqueiroz/",
@@ -20,13 +23,12 @@ export const ContactSection = () => {
           <div className="text-white space-y-8 animate-slide-up">
             <div>
               <h2 className="text-3xl font-bold mb-4">
-                Get in touch!
+                {t('contact_title')}
                 <span
                   className="cursor-pointer hover:text-mustard-300 transition-colors underline decoration-2 underline-offset-8 ml-2"
                   onClick={handleCalendlyClick}
                 >
-                  {" "}
-                  Schedule a meeting with me.{" "}
+                  {t('contact_schedule')}
                 </span>
               </h2>
             </div>
@@ -36,7 +38,7 @@ export const ContactSection = () => {
             >
               <Mail className="w-8 h-8" />
               <div>
-                <p className="text-sm opacity-80"> EMAIL</p>
+                <p className="text-sm opacity-80">{t('contact_email_label')}</p>
                 <p className="text-1 break-words">jo-henrique8@hotmail.com</p>
               </div>
             </div>
@@ -51,7 +53,7 @@ export const ContactSection = () => {
                 onClick={handleSocialClick("linkedin")}
                 className="border-2 border-mustard-400 text-brown-900 hover:bg-mustard-400 hover:text-brown-900 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
-                <Linkedin />
+                <Linkedin className="w-6 h-6"/>
               </Button>
               <Button
                 size="icon"
@@ -59,19 +61,18 @@ export const ContactSection = () => {
                 onClick={handleSocialClick("github")}
                 className="border-2 border-mustard-400 text-brown-900 hover:bg-mustard-400 hover:text-brown-900 w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
-                <Github />
+                <Github className="w-6 h-6"/>
               </Button>
             </div>
           </div>
           <div className="text-center lg:text-right animate-slide-up " style={{ animationDelay: "0.6s" }}>
-            <div className="text-6xl lg:text-8xl font-luckiest text-mustard-300 thank-you-1">Thank</div>
-            <div className="text-6xl lg:text-8xl font-luckiest text-mustard-300 thank-you-2 -mt-1">You</div>
+            <div className="text-6xl lg:text-8xl font-luckiest text-mustard-300 thank-you-1">{t('contact_thank_1')}</div>
+            <div className="text-6xl lg:text-8xl font-luckiest text-mustard-300 thank-you-2 -mt-1">{t('contact_thank_2')}</div>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-white/20 text-center text-white/60 animate-fade-in" style={{ animationDelay: "0.8s" }}>
           <p>
-            &copy; 2025 João Henrique de Freitas Queiroz. Todos os direitos
-            reservados.
+            &copy; 2025 João Henrique de Freitas Queiroz. {t('contact_rights')}.
           </p>
         </div>
       </div>

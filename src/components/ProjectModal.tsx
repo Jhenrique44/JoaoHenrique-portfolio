@@ -6,6 +6,7 @@ import {
 } from "./utils/dialog";
 import { Button } from "./utils/button";
 import { Badge } from "./utils/badge";
+import { useLanguage } from "../translator/LanguageTranslator";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -28,6 +29,7 @@ export const ProjectModal = ({
   onClose,
   project,
 }: ProjectModalProps) => {
+  const { t } = useLanguage();
   if (!project) return null;
 
   const handleLinkClick = (url?: string) => {
@@ -82,23 +84,23 @@ export const ProjectModal = ({
           </div>
 
           <div className="flex gap-3 pt-4">
-            {project.liveUrl && (
+            {/* {project.liveUrl && (
               <Button
                 onClick={() => handleLinkClick(project.liveUrl)}
-                className="bg-crimson-700 hoveR:bg-[#B55338] text-white"
+                className="bg-crimson-700 hover:bg-[#B55338] text-white"
               >
-                View Website
+                {t('proj_btn_website')}
               </Button>
-            )}
-            {/* {project.githubUrl && (
+            )} */}
+            {project.githubUrl && (
               <Button
                 variant="outline"
                 onClick={() => handleLinkClick(project.githubUrl)}
-                className="border-earth-600 text-earth-600 hover:bg-earth-50"
+                className="bg-crimson-700 hover:bg-[#B55338] text-white"
               >
-                View on GitHub
+                {t("proj_btn_github")}
               </Button>
-            )} */}
+            )}
             {/* {project.youtubeUrl && (
               <Button
                 variant="outline"

@@ -7,11 +7,13 @@ import { TooltipProvider } from "./components/utils/tooltip";
 import { Toaster } from "./components/utils/toaster";
 import { Toaster as Sonner } from "./components/utils/sonner";
 import { NotFound } from "./pages/NotFound";
+import { LanguageProvider } from "./translator/LanguageTranslator";
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <LanguageProvider>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -22,6 +24,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
