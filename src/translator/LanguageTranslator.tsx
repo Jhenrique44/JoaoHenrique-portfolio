@@ -99,6 +99,7 @@ const translations = {
 
      // --- Exerience Modal ---
      exp_modal_about: "About this experience",
+     exp_modal_link: "Company Website"
   },
 
   pt: {
@@ -189,6 +190,10 @@ const translations = {
      cv_modal_title: "Baixe Meu Currículo",
      cv_modal_btn_pt: "Versão em Português",
      cv_modal_btn_en: "Versão em Inglês",
+
+     // --- Exerience Modal ---
+     exp_modal_about: "Sobre esta experiência",
+     exp_modal_link: "Site da Empresa"
   },
 };
 

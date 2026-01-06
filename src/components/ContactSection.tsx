@@ -71,7 +71,7 @@ export const ContactSection = () => {
         </div>
         <div className="mt-16 pt-8 border-t border-white/20 text-center text-white/60 animate-fade-in" style={{ animationDelay: "0.8s" }}>
           <p>
-            &copy; 2025 João Henrique de Freitas Queiroz. {t('contact_rights')}
+            &copy; 2026 João Henrique de Freitas Queiroz. {t('contact_rights')}
           </p>
         </div>
       </div>
