@@ -44,7 +44,7 @@ export const ExperienceSection = () => {
         <h2 className="text-4xl lg:text-5xl font-luckiest text-white text-center mb-15 animate-slide-up mb-16">
           {t('exp_title')}
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {experiences.map((experience, index) => (
             <Card
               key={index}

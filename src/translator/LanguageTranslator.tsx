@@ -61,7 +61,7 @@ const translations = {
       "Smart Fleet is a modern fleet-tracking application designed to monitor vehicles in real time and streamline fleet operations. It provides a secure login experience, a clean user interface, and a reliable API for managing and accessing tracking data. Built with Angular on the frontend and Spring Boot on the backend, Smart Fleet delivers a scalable foundation for location tracking, vehicle status monitoring, and future fleet-management features.",
 
     // Resort website React
-    proj_resort_desc: "A resort website built with React and Tailwind CSS.",
+    proj_resort_desc: "A resort website built with React.js",
     proj_resort_full:
       "This project is a responsive luxury resort website built using React where you can find rooms to rent. It features multiple sections including home, about, services, rooms, gallery, testimonials, and contact. The website is designed to provide an engaging user experience with smooth navigation and visually appealing layouts.",
     // picpay challenge
@@ -91,6 +91,11 @@ const translations = {
     contact_thank_1: "Thank",
     contact_thank_2: "You",
     contact_rights: "All rights reserved.",
+
+     // --- CV MODAL ---
+     cv_modal_title: "Download My Resume",
+     cv_modal_btn_pt: "Portuguese Version",
+     cv_modal_btn_en: "English Version",
   },
 
   pt: {
@@ -173,9 +178,14 @@ const translations = {
     contact_title: "Vamos conversar!",
     contact_schedule: "Agende uma reunião comigo aqui.",
     contact_email_label: "EMAIL",
-    contact_thank_1: "Obri",
-    contact_thank_2: "gada",
+    contact_thank_1: "Obrigado!",
+    // contact_thank_2: "",
     contact_rights: "Todos os direitos reservados.",
+
+    // --- CV MODAL ---
+     cv_modal_title: "Baixe Meu Currículo",
+     cv_modal_btn_pt: "Versão em Português",
+     cv_modal_btn_en: "Versão em Inglês",
   },
 };
 

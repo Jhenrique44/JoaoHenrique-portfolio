@@ -13,7 +13,7 @@ export const ContactSection = () => {
     window.open(urls[social as keyof typeof urls], "_blank");
   };
   const handleCalendlyClick = () => {
-    window.open("https://calendly.com/joaoqueiroz/30min", "_blank");
+    window.open("https://calendly.com/jhfqueiroz4/new-meeting", "_blank");
   };
 
   return (
@@ -72,7 +72,7 @@ export const ContactSection = () => {
         </div>
         <div className="mt-16 pt-8 border-t border-white/20 text-center text-white/60 animate-fade-in" style={{ animationDelay: "0.8s" }}>
           <p>
-            &copy; 2025 João Henrique de Freitas Queiroz. {t('contact_rights')}.
+            &copy; 2025 João Henrique de Freitas Queiroz. {t('contact_rights')}
           </p>
         </div>
       </div>
