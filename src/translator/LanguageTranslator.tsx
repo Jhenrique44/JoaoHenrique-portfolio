@@ -88,14 +88,17 @@ const translations = {
     contact_title: "Get in touch!",
     contact_schedule: "Schedule a meeting with me here.",
     contact_email_label: "EMAIL",
-    contact_thank_1: "Thank",
-    contact_thank_2: "You",
+    contact_thank_1: "Thank you!",
+    // contact_thank_2: "You",
     contact_rights: "All rights reserved.",
 
      // --- CV MODAL ---
      cv_modal_title: "Download My Resume",
      cv_modal_btn_pt: "Portuguese Version",
      cv_modal_btn_en: "English Version",
+
+     // --- Exerience Modal ---
+     exp_modal_about: "About this experience",
   },
 
   pt: {

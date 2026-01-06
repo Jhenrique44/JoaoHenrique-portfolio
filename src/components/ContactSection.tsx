@@ -66,8 +66,7 @@ export const ContactSection = () => {
             </div>
           </div>
           <div className="text-center lg:text-right animate-slide-up " style={{ animationDelay: "0.6s" }}>
-            <div className="text-6xl lg:text-8xl font-luckiest text-mustard-300 thank-you-1">{t('contact_thank_1')}</div>
-            <div className="text-6xl lg:text-8xl font-luckiest text-mustard-300 thank-you-2 -mt-1">{t('contact_thank_2')}</div>
+            <div className="text-5xl lg:text-6xl font-luckiest text-mustard-300 thank-you-1">{t('contact_thank_1')}</div>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-white/20 text-center text-white/60 animate-fade-in" style={{ animationDelay: "0.8s" }}>
