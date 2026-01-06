@@ -3,22 +3,28 @@ import { CvModal } from "./CvModal";
 import { Button } from "./utils/button";
 import { Card } from "./utils/card";
 import { useLanguage } from "../translator/LanguageTranslator";
+import { ExpModal } from "./ExpModal";
 
 type Experience = {
   title: string;
   role: string;
   image: string;
+  description: string;
   url: string;
   period?: string;
 };
 
 export const ExperienceSection = () => {
   const { t } = useLanguage();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCvModalOpen, setIsCvModalOpen] = useState(false);
+  const [selectedExperience, setSelectedExperience] =
+    useState<Experience | null>(null);
+  const [isExpModalOpen, setIsExpModalOpen] = useState(false);
   const experiences: Experience[] = [
     {
       title: "Huawei Technologies Co., Ltd.",
       role: "Software Developer - Junior",
+      description: t('exp_huawei_jun'),
       image: "/images/Huawei.png",
       url: "https://www.huawei.com/en/",
       period: "Aug-2023 - Mar-2025",
@@ -26,23 +32,26 @@ export const ExperienceSection = () => {
     {
       title: "Huawei Technologies Co., Ltd.",
       role: "Web Developer Intern",
+      description: t("exp_huawei_it"),
       image: "/images/Huawei.png",
       url: "https://www.huawei.com/en/",
       period: "Aug-2021 - Jul-2023",
     },
   ];
 
-  const handleExperienceClick = (url: string) => {
-    if (url !== "#") window.open(url, "_blank");
+  const handleExperienceClick = (experience: Experience) => {
+    setSelectedExperience(experience);
+    setIsExpModalOpen(true);
   };
+
   const handleCVClick = () => {
-    setIsModalOpen(true);
+    setIsCvModalOpen(true);
   };
   return (
     <section id="experience" className="py-20 px-6 bg-crimson-800">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl lg:text-5xl font-luckiest text-white text-center mb-15 animate-slide-up mb-16">
-          {t('exp_title')}
+          {t("exp_title")}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {experiences.map((experience, index) => (
@@ -50,7 +59,7 @@ export const ExperienceSection = () => {
               key={index}
               className="bg-[#3b1414] border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
-              onClick={() => handleExperienceClick(experience.url)}
+              onClick={() => handleExperienceClick(experience)}
             >
               <div className="p-6">
                 <div className="aspect-video mb-4 rounded-lg overflow-hidden bg-earth-100">
@@ -82,15 +91,20 @@ export const ExperienceSection = () => {
               className="bg-white text-brown-800 hover:bg-brown-300 border-2 border-white font-semibold text-base md:text-lg px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all"
               onClick={handleCVClick}
             >
-              {t('exp_cv_button')}
+              {t("exp_cv_button")}
             </Button>
           </div>
         </div>
       </div>
       <CvModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        isOpen={isCvModalOpen}
+        onClose={() => setIsCvModalOpen(false)}
       ></CvModal>
+      <ExpModal
+        isOpen={isExpModalOpen}
+        onClose={() => setIsExpModalOpen(false)}
+        experience={selectedExperience}
+      ></ExpModal>
     </section>
   );
 };

@@ -73,11 +73,11 @@ export const HeroSection = () => {
     return () => clearTimeout(typingTimeout);
   }, [charIndex, currentLineIndex, terminalLines]);
 
-  useEffect(() => {
-    if (displayedLines.length < terminalLines.length) {
-      setDisplayedLines((prev) => [...prev, ""]);
-    }
-  }, [currentLineIndex, terminalLines]);
+  // useEffect(() => {
+  //   if (displayedLines.length < terminalLines.length) {
+  //     setDisplayedLines((prev) => [...prev, ""]);
+  //   }
+  // }, [currentLineIndex, terminalLines]);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {

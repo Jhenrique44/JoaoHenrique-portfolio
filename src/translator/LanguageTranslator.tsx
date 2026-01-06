@@ -99,7 +99,9 @@ const translations = {
 
      // --- Exerience Modal ---
      exp_modal_about: "About this experience",
-     exp_modal_link: "Company Website"
+     exp_modal_link: "Company Website",
+     exp_huawei_jun: "I developed and modernized critical Full Stack logistics systems using Vue.js, Java Spring Boot, and Node.js, leading a legacy refactoring initiative that improved UX and boosted new project demand by 15%. Additionally, I automated transport verification and billing processes, cutting processing time by 80% through API Gateway and PostgreSQL integrations. I also optimized database performance during a migration to PostgreSQL, implementing caching strategies and query refactoring that reduced response times by 30%.",
+     exp_huawei_it: "I developed the front-end of a Supply Chain system using Vue.js, JavaScript, HTML, and CSS, which resulted in a 30% increase in logistics efficiency. My role involved implementing and integrating REST APIs to ensure scalability and seamless system communication. I also focused on operational optimization by automating manual workflows with low-code platforms to eliminate repetitive tasks. Furthermore, I authored detailed technical documentation to ensure strategic alignment between development and business stakeholders."
   },
 
   pt: {
@@ -127,7 +129,7 @@ const translations = {
     about_p1:
       "Meu nome é João Henrique e acredito que a tecnologia pode transformar realidades e moldar o futuro. Meu objetivo é construir soluções que impactem positivamente a vida das pessoas, otimizar processos e entregar inovação sempre com propósito, qualidade e impacto. Quero inspirar e apoiar aqueles que estão iniciando suas carreiras em tecnologia, além de aprender e crescer com meus colegas e mentores para me tornar a melhor versão de mim mesmo.",
     about_p2:
-      "Sou um Engenheiro de Computação formado pela Faculdade de Engenharia de Sorocaba (FACENS) e estou prestes a concluir minha pós-graduação em Arquitetura de Software pela Faculdade de Engenharia de Sorocaba. Sou um desenvolvedor apaixonado por criar, aprimorar e aprender coisas novas, e a combinação disso com pensamento estratégico me permite entregar soluções escaláveis ​​e confiáveis.",
+      "Sou Engenheiro de Computação formado pela Faculdade de Engenharia de Sorocaba (FACENS) e estou prestes a concluir minha pós-graduação em Arquitetura de Software pela Faculdade de Engenharia de Sorocaba. Sou um desenvolvedor apaixonado por criar, aprimorar e aprender coisas novas, e a combinação disso com pensamento estratégico me permite entregar soluções escaláveis ​​e confiáveis.",
     about_p3:
       "Tenho mais de 3 anos de experiência como desenvolvedor, principalmente focado em desenvolvimento front-end com Vue.js, mas também com conhecimento em construção de APIs em Java usando o ecossistema Spring Boot. Também contribuí para migrações de banco de dados em SQL, integrações de API, automações de fluxo de trabalho e documentação de projetos.",
     about_p4:
@@ -179,6 +181,7 @@ const translations = {
     skill_cat_web: "Desenvolvimento Web",
     skill_cat_tools: "Ferramentas",
     skill_cat_other: "Outras Tecnologias",
+
     contact_title: "Vamos conversar!",
     contact_schedule: "Agende uma reunião comigo aqui.",
     contact_email_label: "EMAIL",
@@ -193,7 +196,9 @@ const translations = {
 
      // --- Exerience Modal ---
      exp_modal_about: "Sobre esta experiência",
-     exp_modal_link: "Site da Empresa"
+     exp_modal_link: "Site da Empresa",
+     exp_huawei_jun: "Desenvolvi e modernizei sistemas logísticos críticos (Full Stack) utilizando Vue.js, Java Spring Boot e Node.js, liderando a refatoração de legados que melhorou a UX e aumentou a demanda de novos projetos em 15%.Automatizei o sistema de verificação de transportes e faturamento, reduzindo o tempo de processamento em 80% através de integrações via API Gateway e PostgreSQL.Otimizei o desempenho do banco de dados na migração para PostgreSQL, implementando estratégias de cache e refatoração de queries que reduziram o tempo de resposta em 30%.",
+     exp_huawei_it: "Desenvolvi o front-end do sistema de Supply Chain utilizando Vue.js, JavaScript, HTML e CSS, resultando em um aumento de 30% na eficiência dos processos logísticos. Implementei e integrei APIs REST, garantindo a escalabilidade da solução e a comunicação fluida entre diferentes sistemas. Automatizei fluxos de trabalho manuais utilizando plataformas low-code, eliminando tarefas repetitivas e otimizando a operação diária. Elaborei documentação técnica detalhada (arquitetura e requisitos), facilitando o alinhamento estratégico entre as equipes de desenvolvimento e de negócios."
   },
 };
 
