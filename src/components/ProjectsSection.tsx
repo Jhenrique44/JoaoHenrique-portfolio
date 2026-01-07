@@ -38,7 +38,7 @@ export const ProjectsSection = () => {
       liveUrl: "https://github.com/Jhenrique44/login-page-ng",
     },
     {
-      title: "Resort Website React",
+      title: "Resort Website",
       description: t("proj_resort_desc"),
       fullDescription: t("proj_resort_full"),
       image: "/images/resort.png",
@@ -47,7 +47,7 @@ export const ProjectsSection = () => {
       liveUrl: "https://github.com/Jhenrique44/Resort-yt",
     },
     {
-      title: "Picpay-backend-challenge",
+      title: "Picpay Challenge",
       description: t("proj_picpay_desc"),
       fullDescription: t("proj_picpay_full"),  
       image: "/images/Picpay-project.png",

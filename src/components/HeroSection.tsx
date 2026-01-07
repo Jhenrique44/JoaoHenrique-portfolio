@@ -102,12 +102,12 @@ export const HeroSection = () => {
       id="home"
       className="min-h-screen flex items-center justify-center px-6 pt-20 pb-0 gradient-crimson-dark overflow-hidden"
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto max-w-6xl px-0 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animite-fade-in">
             <div className="text-white">
               <h1
-                className="text-4xl lg:text-5xl font-bold mb-4 animate-slide-up whitespace-nowrap"
+                className="text-4x1 lg:text-5xl font-bold mb-4 animate-slide-up whitespace-normal sm:whitespace-nowrap"
                 style={{ animationDelay: "0.2s" }}
               >
                 {t("hero_greeting")}
